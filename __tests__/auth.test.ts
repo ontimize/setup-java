@@ -124,6 +124,38 @@ describe('auth tests', () => {
     const expectedSettings = `<settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0 https://maven.apache.org/xsd/settings-1.0.0.xsd">
+  <profiles>
+    <profile>
+      <id>_sonatype-snapshots_</id>
+      <activation>
+        <activeByDefault>true</activeByDefault>
+      </activation>
+      <repositories>
+        <repository>
+          <id>sonatype-snapshots</id>
+          <url>https://s01.oss.sonatype.org/content/repositories/snapshots</url>
+          <releases>
+            <enabled>false</enabled>
+          </releases>
+          <snapshots>
+            <enabled>true</enabled>
+          </snapshots>
+        </repository>
+      </repositories>
+      <pluginRepositories>
+        <pluginRepository>
+          <id>sonatype-snapshots</id>
+          <url>https://s01.oss.sonatype.org/content/repositories/snapshots</url>
+          <releases>
+            <enabled>false</enabled>
+          </releases>
+          <snapshots>
+            <enabled>true</enabled>
+          </snapshots>
+        </pluginRepository>
+      </pluginRepositories>
+    </profile>
+  </profiles>
   <servers>
     <server>
       <id>${id}</id>
@@ -145,6 +177,38 @@ describe('auth tests', () => {
     const expectedSettings = `<settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0 https://maven.apache.org/xsd/settings-1.0.0.xsd">
+  <profiles>
+    <profile>
+      <id>_sonatype-snapshots_</id>
+      <activation>
+        <activeByDefault>true</activeByDefault>
+      </activation>
+      <repositories>
+        <repository>
+          <id>sonatype-snapshots</id>
+          <url>https://s01.oss.sonatype.org/content/repositories/snapshots</url>
+          <releases>
+            <enabled>false</enabled>
+          </releases>
+          <snapshots>
+            <enabled>true</enabled>
+          </snapshots>
+        </repository>
+      </repositories>
+      <pluginRepositories>
+        <pluginRepository>
+          <id>sonatype-snapshots</id>
+          <url>https://s01.oss.sonatype.org/content/repositories/snapshots</url>
+          <releases>
+            <enabled>false</enabled>
+          </releases>
+          <snapshots>
+            <enabled>true</enabled>
+          </snapshots>
+        </pluginRepository>
+      </pluginRepositories>
+    </profile>
+  </profiles>
   <servers>
     <server>
       <id>${id}</id>
