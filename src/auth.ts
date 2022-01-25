@@ -115,6 +115,17 @@ export function generate(
             password: `\${env.${password}}`
           }
         ]
+      },
+      mirrors: {
+        mirror: [
+          {
+            id: 'maven-default-http-blocker',
+            mirrorOf: 'external:http:*',
+            name: 'Pseudo repository to mirror external repositories initially using HTTP.',
+            url: 'http://0.0.0.0/',
+            blocked: false
+          }
+        ]
       }
     }
   };

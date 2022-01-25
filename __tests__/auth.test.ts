@@ -164,6 +164,15 @@ describe('auth tests', () => {
       <password>\${env.&amp;&lt;&gt;"''"&gt;&lt;&amp;}</password>
     </server>
   </servers>
+  <mirrors>
+    <mirror>
+      <id>maven-default-http-blocker</id>
+      <mirrorOf>external:http:*</mirrorOf>
+      <name>Pseudo repository to mirror external repositories initially using HTTP.</name>
+      <url>http://0.0.0.0/</url>
+      <blocked>false</blocked>
+    </mirror>
+  </mirrors>
 </settings>`;
 
     expect(auth.generate(id, username, password)).toEqual(expectedSettings);
@@ -221,6 +230,15 @@ describe('auth tests', () => {
       <passphrase>\${env.${gpgPassphrase}}</passphrase>
     </server>
   </servers>
+  <mirrors>
+    <mirror>
+      <id>maven-default-http-blocker</id>
+      <mirrorOf>external:http:*</mirrorOf>
+      <name>Pseudo repository to mirror external repositories initially using HTTP.</name>
+      <url>http://0.0.0.0/</url>
+      <blocked>false</blocked>
+    </mirror>
+  </mirrors>
 </settings>`;
 
     expect(auth.generate(id, username, password, gpgPassphrase)).toEqual(expectedSettings);
