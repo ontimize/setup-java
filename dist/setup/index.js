@@ -24481,7 +24481,7 @@ function generate(id, username, password, gpgPassphrase) {
                     id: 'maven-default-http-blocker',
                     mirrorOf: 'external:http:*',
                     name: 'Pseudo repository to mirror external repositories initially using HTTP.',
-                    url: 'http://0.0.0.0/',
+                    url: 'https://repo.maven.apache.org/maven2',
                     blocked: false
                   }
                 ]

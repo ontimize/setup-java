@@ -168,7 +168,7 @@ describe('auth tests', () => {
       <id>maven-default-http-blocker</id>
       <mirrorOf>external:http:*</mirrorOf>
       <name>Pseudo repository to mirror external repositories initially using HTTP.</name>
-      <url>http://0.0.0.0/</url>
+      <url>https://repo.maven.apache.org/maven2</url>
       <blocked>false</blocked>
     </mirror>
   </mirrors>
@@ -234,7 +234,7 @@ describe('auth tests', () => {
       <id>maven-default-http-blocker</id>
       <mirrorOf>external:http:*</mirrorOf>
       <name>Pseudo repository to mirror external repositories initially using HTTP.</name>
-      <url>http://0.0.0.0/</url>
+      <url>https://repo.maven.apache.org/maven2</url>
       <blocked>false</blocked>
     </mirror>
   </mirrors>
