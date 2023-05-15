@@ -6,6 +6,7 @@
   - [Liberica](#Liberica)
   - [Microsoft](#Microsoft)
   - [Amazon Corretto](#Amazon-Corretto)
+  - [Oracle](#Oracle)
 - [Installing custom Java package type](#Installing-custom-Java-package-type)
 - [Installing custom Java architecture](#Installing-custom-Java-architecture)
 - [Installing custom Java distribution from local file](#Installing-Java-from-local-file)
@@ -110,6 +111,19 @@ steps:
 - run: java -cp java HelloWorldApp
 ```
 
+### Oracle
+**NOTE:** Oracle Java SE Development Kit is only available for version 17 and later.
+
+```yaml
+steps:
+- uses: actions/checkout@v3
+- uses: actions/setup-java@v3
+  with:
+    distribution: 'oracle'
+    java-version: '17'
+- run: java -cp java HelloWorldApp
+```
+
 ## Installing custom Java package type
 ```yaml
 steps:
@@ -132,7 +146,7 @@ steps:
   with:
     distribution: '<distribution>'
     java-version: '11'
-    architecture: x86 # optional - defaults to x64
+    architecture: x86 # optional - default value derived from the runner machine
 - run: java -cp java HelloWorldApp
 ```
 
